@@ -30,7 +30,7 @@ class QuizHelper {
         }
     }
 
-    AnswerChecker(answer) {
+    answerChecker(answer) {
         return answer === this.correctAnswer;
     }
 

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import QuizHelper from "../Helper/QuizHelper";
 
 class Quiz extends Component {
   constructor(props) {
