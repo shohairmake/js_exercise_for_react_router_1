@@ -1,7 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Quiz = () => {
-  return <h1>クイズ</h1>;
-};
+class Quiz extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quizzes: [],
+      answers: [],
+      currentIndex: 0,
+      numberOfCorrects: 0
+    };
+  }
+
+  render() {
+      return <> テスト </>;
+  }
+
+}
 
 export default Quiz;
