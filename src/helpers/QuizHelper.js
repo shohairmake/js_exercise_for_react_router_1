@@ -1,5 +1,6 @@
 import _ from "lodash";
 import he from 'he';
+import axios from 'axios';
 
 const API_URL = "https://opentdb.com/api.php?amount=10&type=multiple";
 
@@ -12,9 +13,8 @@ class QuizHelper {
 
     static async quizfetcher() {
         try {
-            const response = await fetch(API_URL);
-            const quizData = await response.json();
-            const quizDataList = await quizData.results;
+            const response = await axios.get(API_URL);
+            const quizDataList = await response.data.results;
             return quizDataList.map(result => {
                 return {
                     question: he.decode(result.question),
