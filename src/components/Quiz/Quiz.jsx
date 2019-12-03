@@ -31,17 +31,17 @@ class Quiz extends Component {
     const { quizzes, currentIndex } = this.state;
       /* now loading */
     if (quizzes.length === 0) {
-      return <> {this.renderLoading()} </>;
+      return <React.Fragment> {this.renderLoading()} </React.Fragment>;
     }
 
       /* playing the quiz */
     if (quizzes.length > 0 && currentIndex < quizzes.length) {
-      return <> {this.renderQuiz()} </>;
+      return <React.Fragment> {this.renderQuiz()} </React.Fragment>;
     }
  
     /* finish the quiz */
     if (quizzes.length > 0 && currentIndex >= quizzes.length) {
-      return <> {this.renderResult()} </>;
+      return <React.Fragment> {this.renderResult()} </React.Fragment>;
     }
   }
 
