@@ -29,17 +29,17 @@ class Quiz extends Component {
 
   render() {
     const { quizzes, currentIndex } = this.state;
-    // now loading
+      /* now loading */
     if (quizzes.length === 0) {
       return <> {this.renderLoading()} </>;
     }
 
-    // playing the quiz
+      /* playing the quiz */
     if (quizzes.length > 0 && currentIndex < quizzes.length) {
       return <> {this.renderQuiz()} </>;
     }
-
-    // finish the quiz
+ 
+    /* finish the quiz */
     if (quizzes.length > 0 && currentIndex >= quizzes.length) {
       return <> {this.renderResult()} </>;
     }
@@ -62,7 +62,7 @@ class Quiz extends Component {
     const answers = quiz.shuffleAnswers().map((answer, index) => {
       return (
         <li key={index}>
-          <button onClick={() => this.onclickhundler(quiz, answer)}>
+          <button onClick={() => this.onClickHandler(quiz, answer)}>
             {answer}
           </button>
         </li>
@@ -104,7 +104,7 @@ class Quiz extends Component {
     );
   }
 
-  onclickhundler = (quiz, answer) => {
+  onClickHandler = (quiz, answer) => {
     let { currentIndex, numberOfCorrects } = this.state;
     const isCorrect = quiz.answerChecker(answer);
     if (isCorrect) {
