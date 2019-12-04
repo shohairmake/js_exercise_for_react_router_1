@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Button.css";
 
 
 const Button = (props) => {
     let { clickEvent } = props; 
     return (
-        <button className="Button" onClick={clickEvent}>
+        <div className="Button" onClick={clickEvent}>
             {props.children}
-        </button>
+        </div>
     );
 }
 

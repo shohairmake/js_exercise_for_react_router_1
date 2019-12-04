@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import QuizHelper from "../../helpers/QuizHelper";
 import Button from '../Button/Button';
+import './Quiz.css';
 
 class Quiz extends Component {
   constructor(props) {
@@ -75,7 +76,7 @@ class Quiz extends Component {
         <h1>クイズページ</h1>
         <div>
           <p>{quiz.question}</p>
-          <ul>{answers}</ul>
+          <ul className="QuizList">{answers}</ul>
         </div>
         <hr />
         <Link to="/">トップページへ</Link>
