@@ -5,11 +5,11 @@ import "./Button.css";
 
 const Button = (props) => {
     let { clickEvent } = props; 
-  return (
-    <div className="Button" onClick={clickEvent}>
-      {props.children}
-    </div>
-  );
+    return (
+        <div className="Button" onClick={clickEvent}>
+            {props.children}
+        </div>
+    );
 }
 
 Button.propTypes = {
