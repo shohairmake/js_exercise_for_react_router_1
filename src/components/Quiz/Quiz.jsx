@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import QuizHelper from "../../helpers/QuizHelper";
+import Button from '../Button/Button';
 
 class Quiz extends Component {
   constructor(props) {
@@ -62,9 +63,9 @@ class Quiz extends Component {
     const answers = quiz.shuffleAnswers().map((answer, index) => {
       return (
         <li key={index}>
-          <button onClick={() => this.onClickHandler(quiz, answer)}>
+          <Button clickEvent={() => this.onClickHandler(quiz, answer)}>
             {answer}
-          </button>
+          </Button>
         </li>
       );
     });
@@ -90,13 +91,13 @@ class Quiz extends Component {
         <h1>クイズページ</h1>
         <div>
           <p>{`${numberOfCorrects}/${quizzes.length} corrects.`}</p>
-          <button
-            onClick={() => {
+          <Button
+            clickEvent={() => {
               this.initAndFetchData();
             }}
           >
             Restart
-          </button>
+          </Button>
         </div>
         <hr />
         <Link to="/">トップページへ</Link>
